@@ -27,7 +27,7 @@ class Push implements Notifications\Push
     public function __construct(
         Delivery\ServiceInterface $service,
         RecipientRepositoryInterface $repository,
-        ?StringInterpolation\StringInterpolatorInterface $interpolator
+        StringInterpolation\StringInterpolatorInterface $interpolator = null
     ) {
         $this->service = $service;
         $this->repository = $repository;
