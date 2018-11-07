@@ -50,7 +50,7 @@ class Push implements Notifications\Push
         }
 
         $message = $notification->getMessage();
-        $context = $notification->getContext();
+        $context = $notification->getContext() ?? [];
 
         $text = $this->interpolator->getInterpolatedString($message, $context);
 
